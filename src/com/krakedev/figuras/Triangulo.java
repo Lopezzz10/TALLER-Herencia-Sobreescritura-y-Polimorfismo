@@ -5,12 +5,16 @@ public class Triangulo extends Figura {
 	private double lado1;
 	private double lado2;
 	private double lado3;
+	private double base;
+	private double altura;
 
-	public Triangulo(String nombre, String color, double lado1, double lado2, double lado3) {
+	public Triangulo(String nombre, String color, double lado1, double lado2, double lado3, double base, double altura) {
 		super(nombre, color);
 		this.lado1 = lado1;
 		this.lado2 = lado2;
 		this.lado3 = lado3;
+		this.base = base;
+		this.altura = altura;
 	}
 
 	public double getLado1() {
@@ -37,6 +41,22 @@ public class Triangulo extends Figura {
 		this.lado3 = lado3;
 	}
 
+	public double getBase() {
+		return base;
+	}
+
+	public void setBase(double base) {
+		this.base = base;
+	}
+
+	public double getAltura() {
+		return altura;
+	}
+
+	public void setAltura(double altura) {
+		this.altura = altura;
+	}
+
 	@Override
 	public int calcularPerimetro() {
 		return (int) (lado1 + lado2 + lado3);
@@ -44,7 +64,6 @@ public class Triangulo extends Figura {
 
 	@Override
 	public double calcularArea() {
-		double s = (lado1 + lado2 + lado3) / 2.0;
-		return Math.sqrt(s * (s - lado1) * (s - lado2) * (s - lado3));
+		return (base * altura) / 2.0;
 	}
 }
