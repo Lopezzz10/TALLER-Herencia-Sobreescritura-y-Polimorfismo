@@ -27,4 +27,11 @@ public class Figura {
         return "Figura{" + "nombre: " + nombre + 
         		", color: " + color + '}';
 	}
+	public int calcularPerimetro(){
+		return 0;
+	}
+	
+	public double calcularArea(){
+		return 0;
+	}
 }
